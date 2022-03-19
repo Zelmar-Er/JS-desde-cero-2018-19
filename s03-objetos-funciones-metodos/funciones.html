@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <style>
+        body{
+            background-color: #eee;
+            font-size: 1.2rem;
+            margin-left: 2rem;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Introducción a Funciones</h1>
+        <p>
+            Son fragmentos de código que escribimos para ejecutar una tarea y no volver a escribir el mismo código más de una vez.<br />
+            Nos ayuda a modularizar el código.<br />
+            Las funciones deben realizar una sola tarea.<br />
+            Su sintaxis es: <dd>
+                <code>
+                    function nombreFuncion(){<br />
+                    //código a ejecutar<br />
+                }<br />
+                const nombreFuncion = () => {<br />
+                    //código a ejecutar<br />
+                }
+                </code>
+            </dd>
+            Pueden recibir parametros.<br />
+            <dd>
+                <code>
+                    function nombreFuncion(parametro1, parametro2...){<br />
+                    //código a ejecutar<br />
+                }<br />
+                const nombreFuncion = (parametro1, parametro2...) => {<br />
+                    //código a ejecutar<br />
+                }
+                </code>
+            </dd>
+            Pueden devolver valores.<br />
+            <dd>
+                <code>
+                    function nombreFuncion(parametro1, parametro2...){<br />
+                    return parametro1+parametro2<br />
+                }<br />
+                const nombreFuncion = (parametro1, parametro2...) => parametro1+parametro2
+                </code>
+            </dd>
+        </p>
+    </main>
+    <script
+    src="funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Spread Operator</h1>
+        <p>
+            U operador de expansión. Su sintaxis es: ...<br />
+            <code>
+                const numbers = [-12,2,3,23,43,2,3];<br />
+                console.log(numbers) // (7) [-12, 2, 3, 23, 43, 2, 3]<br />
+                console.log(...numbers) // -12 2 3 23 43 2 3<br />
+            </code>
+            Al utilizarlo obtenemos los valores por separado.<br />
+            Esto nos permite, enviar elementos de un array a una función. Ej:<br />
+            <code>
+                const addNumbers = (a,b,c) => {<br />
+                    console.log(a+b+c)<br />}<br />
+                let numbersToAdd = [1,2,3]<br />
+                console.log(addNumbers(1,2,3)) // 6<br />
+                console.log(addNumbers(numbersToAdd)) // 1,2,3undefinedundefined<br />
+                console.log(addNumbers(...numbersToAdd)) // 6<br />
+            </code>
+            Añadir un array a otro. Ej<br />
+            <code>
+                let users = ['pablo','javier','alejo'];<br />
+                let newUsers = ['valentina','rosa','juana'];<br />
+                console.log(users); // (3) ['pablo', 'javier', 'alejo']<br />
+                users.unshift(newUsers);<br />
+                console.log(users); // (6) ['valentina', 'rosa', 'juana', 'pablo', 'javier', 'alejo']<br />
+            </code>
+            Copiar arrays.<br /> <code>
+            let numbersTwo = [...numbers]<br />
+            console.log(numbersTwo) // (7) [-12, 2, 3, 23, 43, 2, 3]</code><br />
+            Concatenar arrays.<br /><code>
+            let numOne = [1,2,3];<br />
+            let numTwo = [4,5,6];<br />
+            let numThree = [...numOne,...numTwo];<br /></code>
+            console.log(numThree) // (6) [1,2,3,4,5,6]<br />
+            Enviar un número indefinido de argumentos a una función. Parámetros REST<br />
+            <code>
+                const restParams = (...x) =>{<br />
+                    console.log(x)<br />
+                }<br />
+                restParams(2,3,5,2,65,'a','g','r',7,'h') // (10) [2, 3, 5, 2, 65, 'a', 'g', 'r', 7, 'h']<br />
+            </code>
+            Librería math.<br />
+            Se puede utilizar con las funciones de la librería.<br />
+            <code>
+                consle.log(Math.max(...numbers)) // 43<br />
+            </code>
+            Eliminar elementos duplicados.<br />
+            <code>
+                console.log(new Set(numbers)) // -12,2,3,23,43 (nos devuelve un objeto set sin duplicados)<br />
+                console.log([...new Set(numbers)]) // [-12,2,3,23,43] (nos devuelve un array sin duplicados)
+            </code>
+        </p>
+    </main>
+    <script src="spread-operator.js"></script>
+</body>
+</html>

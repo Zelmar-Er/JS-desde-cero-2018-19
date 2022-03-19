@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Intersection Observer</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <style>
+        body {
+            background-color: #2a2a2a;
+            text-align: center;
+            font-family: sans-serif;
+            overflow: auto;
+        }
+        .box {
+            background-color: rgb(81, 0, 128);
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 100vh;
+            padding: 1.5rem 0;
+            position: relative;
+        }
+        .box::after {
+            content: "25%";
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 100%;
+            background-color: peru;
+            height: 25%;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <h1>API Intersection Observer I</h1>
+            <p>
+                Esta API sirve para saber cuando un elemento se ve y cuando esta oculto, esto nos ayuda a realizar lazyload o carga presosa. Esto nos permita mejorar los tiempos de carga y ahorrar recursos
+            </p>
+            <div>
+                <div id="box1" class="box">box-1</div>
+                <div id="box2" class="box">box-2</div>
+                <div id="box3" class="box">box-3</div>
+                <div id="box4" class="box">box-4</div>
+            </div>
+        </section>
+    </article>
+    <script src="intersection-observer.js"></script>
+</body>
+</html>

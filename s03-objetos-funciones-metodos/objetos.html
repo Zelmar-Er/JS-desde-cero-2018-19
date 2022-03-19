@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <style>
+        body{
+            background-color: #eee;
+            font-size: 1.2rem;
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Introducción a Objetos</h1>
+        <p>
+            Son estructuras de datos que representan propiedades, valores y acciones que puede realizar el objeto.<br />
+            Todos los objetos tienen propiedades o atributos y comportamientos o acciones representadas por pares de <code>clave (key): valor (value)</code>.<br />
+            Ejemplo: de una computadora.<br /> <code>const computer = {<br />
+            screenSize: 17,<br />
+            model: 'MacBook Pro'<br />
+            }</code><br />
+            Una mesa. <br /> <code>const table = {<br />
+            material = 'wood',<br />
+            width: 160,<br />
+            height: 110<br />
+            }</code>
+        </p>
+        <p>
+            Para acceder a las propiedades y acciones del objeto se utiliza la nomensclatura del punto.<br />
+            <code>const person = {<br />
+                name: 'Juan',<br />
+                age: 26,<br />
+                sons: ['Laura','Diego']<br />
+            }</code><br />
+            <code>
+                console.log(person.name);// Juan <br />
+                console.log(person.age);// 26 <br />
+                console.log(person.sons[0]);// Laura <br />
+                console.log(person.sons[1]);// Diego <br />
+            </code><br />
+            Si quisieramos saber las keys de un objeto podemos iterarlo. Ej:<br />
+            <code>for(const key in person){<br />
+                console.log(key);<br />
+            }</code>// name  //  age  // sons<br />
+            Y si quisieramos sus valores tambien lo podemos iterar. Ej:<br />
+            <code>for(const key in person){<br />
+                console.log(person[key]);<br />
+            }</code>// Juan // 26 // Laura Diego
+        </p>
+    </main>
+    <script src="objetos.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de los Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Métodos de los Arrays</h1>
+        <p>
+            .from(iterable) - Convierte en array el elemento iterable.<br />
+            <code>
+                let word = 'Hola Mundo';<br />
+                console.log(Array.from(word)); // (10) ['H', 'o', 'l', 'a', ' ', 'M', 'u', 'n', 'd', 'o']
+                <br />
+            </code>
+            .sort([callback]) - Ordena los elementos de un array alfabéticamente(valor Unicode), si le pasamos un callback los ordena en función del algoritmo que le pasemos.<br />
+            <code>
+                const letters = ['c','b','a','z'];<br />
+                const numbers = [2,8,4,20,80,40]; // .sort() no funciona con números por lo que necesitaremos una callbak<br />
+                console.log(letters.sort()) // 'a','b','c','z'<br />
+                console.log(numbers.sort()) // 2, 20, 4, 40, 8, 80<br />
+                console.log(numbers.sort((a,b)=>a-b)) // 2, 4, 8, 20, 40, 80<br />
+            </code>
+            .forEach(callback(currentValue,[index])) - Ejecuta la función indicada una vez por cada elemento del array.<br />
+            <code>
+                numbers.forEach((number)=>console.log(number)) // 2 8 4 20 80 40<br />
+                letters.forEach((leter, i)=>console.log(`${letter} esta en la posición ${i}`)) // c esta en la posición 0<br />
+                b esta en la posición 1<br />
+                a esta en la posición 2<br />
+                z esta en la posición 3<br />
+            </code>
+            .some(callback) - Comprueba si al menos un elemento del array cumple la condición.<br />
+            <code>
+                const words = ['HTML','CSS','JavaScript','PHP'];<br />
+                console.log(words.some(words => words.length > 4)) // true<br />
+            </code>
+            .every(callback) - Comprueba si todos los elementos del array cumplen la condición.<br />
+            <code>
+                console.log(words.every(words => words.length > 3)) //false<br />
+            </code>
+            .map(callback) - Transforma todos los elementos del array y devuelve un nuevo array.<br />
+            <code>
+                numbers.map(number => console.log(number * 2))
+            </code><br />
+            .filter(callback) - Filtra todos los elementos del array que cumplan la condición y devuelve un nuevo array.<br />
+            <code>
+                const filtrados = numbers.filter(n => n > 8);
+                console.log(filtrados) // [20,80,40]
+            </code><br />
+            .reduce(callback) - Reduce todos los elementos del array a un único valor.<br />
+            <code>
+                console.log(numbers.reduce((a,b)=>a+b)) // 154
+            </code>
+        </p>
+    </main>
+    <script src="metodos-arrays.js">
+    </script>
+</body>
+</html>

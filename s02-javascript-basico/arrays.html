@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <article>
+        <h1>Arrays I y II</h1>
+        <section>
+            <h2>Arrais I</h2>
+            <p>
+                Son estructuras que nos permiten almacenar varios datos y agruparlos.<br />
+                Se pueden llenar con cualquier tipo de dato válido en JavaScript y deben ir separados por comas.<br />
+                Se pueden mezclar tipos de datos, pero no es recomendable.<br />
+                Se declaran con llaves cuadradas o corchetes[].<br />
+                Pueden declararce vacíos o con contenido ya establecido.<br />
+                Pueden añadirce o eliminarse elementos en el momento que queramos.<br />
+                let numero = 5;<br />
+                lat array = [];<br />
+                let numeros [1,2,3,4,5];<br />
+                Cada uno de los elementos podrá ser identificado por su índice, es decir su posición.<br />
+                Los índices empiezan a contar desde 0.
+            </p>
+        </section>
+        <section>
+            <h2>Arrais II</h2>
+            <p>
+                Propiedas: <dd>
+                    .length - devuelve el número de posiciones que contiene el array.
+                </dd>
+                Métodos: <dd>
+                    Array.isArray() - devuelve true si la variable es un array.
+                </dd>
+                Eliminar un elemento: <dd>
+                    .shift() - Elimina el primer elemento del array y devuelve ese elemento.<br />
+                    .pop() - Elimina el último elemento de un array y devuelve ese elemento.
+                </dd>
+                Añadir elementos: <dd>
+                    .push(e1,e2,e3,...) - añade uno o más elementos al final del array y devuelve la nueva longitud.<br />
+                    .unshift(e1,e2,e3,...) - añade uno o más elementos al comienzo del array y devuelve la nueva longitud.
+                </dd>
+                Buscar elementos: <dd>
+                    .indexOf() - Devuelve el primer índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.<br />
+                    lastIndexOf() - Devuelve el último índice del elemento que coincida con el valor especificado, o -1 si ninguno en encontrado.
+                </dd>
+                .reverse() - invierte el orden de los elementos del array.<br />
+                .join('separador') - devuelve un string con el separador que indiquemos, por defecto son comas.<br />
+                .splice(a,b,item) - cambia el contenido de un array eliminando y/o agregando nuevos elementos. <dd>
+                    a - Indice de inicio. Si solo se indica el indice, borrara los elementos despues de este.<br />
+                    b - Número de elementos (opcional). Si b es distinto a 0 elimina el número de valores que indiquemos apartir de a.<br />
+                    items - Elementos a añadir en el caso de que se añadan (opcional).<br />
+                    Ej: let menosAnimales = animales.splice(3);<br />
+                    let algunosAnimales = animales.splice(5,2);<br />
+                    let nuevosAnimales = animeles.splice(2,0,'coballo','perro','conejo');
+                </dd>
+                .slice(a,b) - Extrae elementos de un array desde el índice a hasta el indice b. Si no existe b lo hace desde a hasta el final, si no existe ni a ni b hace una copia del original.
+            </p>
+        </section>
+    </article>
+    <script src="arrays.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar, clonar y borrar elementos</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Insertar y eliminar elementos II</h1>
+            <p>
+                <code>parent.insertBefore(newElement, referenceElement)</code> - Inserta un elemento antes del elemento de de referencia<br />
+                SOPORTE TOTAL<br />
+                    <code>
+                        parent.insertAdjacentElement(position, element)<br />
+                        parent.insertAdjacentHTML(position, HTML)<br />
+                        parent.insertAdjacentText(position, text)<br />
+                    </code>
+            </p>
+            <p>
+                Positions: <dd>
+                    beforebegin - Antes de que empiece (hermano anterior)<br />
+                    afterbegin - Después de que empiece (primer hijo)<br />
+                    beforeend - Antes de que acabe (último hijo)<br />
+                    afterend - después de que acabe (hermano siguiente)
+                </dd>
+                <code>parent.replaceChild(newChild, oldChild)</code> - Reemplaza un hijo por otro
+            </p>
+        </section>
+        <section>
+            <h1>DOM manipulation convenience mathods - JQuery Like</h1>
+            <a href="https://caniuse.com/#search=jQuery-like">Info de compatibilidad</a>
+            <p>
+                Positions: <dd>
+                    parent.before() - Antes de que empiece (hermano anterior)<br />
+                    parent.prepend() - Después de que empiece (primer hijo)<br />
+                    parent.append() - Antes de que acabe (último hijo)<br />
+                    parent.after() - Después de que acabe (hermano siguiente)<br />
+                   <code>child.replaceWith(newChild)</code>
+                </dd>
+            </p>
+            <h2>Clonar y Eliminar elementos</h2>
+            <p>
+                element.clonoNode(true|false) - Clona el nodo. Si le pasamos true clono todo el elmento con los hijos, si le pasamos false colona solo el elmento sin hijos<br />
+                elemnet.remove() - Elimina el nodo del DOM<br />
+                element.removeChild(child) - Elimina el nodo hijo del DOM
+            </p>
+        </section>
+    </main>
+    <div id="prueba">
+        <h1 id="title">Insertar y eliminar elementos II - Practica</h1>
+        <ul id="list">
+            <li>Reference son 1</li>
+            <li>Reference son 2</li>
+            <li id="toReplace">Van a reemplazarme</li>
+        </ul>
+    </div>
+    <script src="insertar-clonar-borrar.js"></script>
+</body>
+</html>

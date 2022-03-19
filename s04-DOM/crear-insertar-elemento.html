@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear e Insertar Elementos</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+</head>
+<body>
+    <main>
+        <h1>Crear e insertar elementos</h1>
+        Crear un elmento: document.createElement('element')<br />
+        Escribir texto en un elemento: element.textContent = texto<br />
+        Escribir HTML en un elemento: element.innerHTML = código HTML<br />
+        Añadir un elemento al DOM: parent.appendChild(element)<br />
+        Fragmentos de código: document.createDocumentFragment()
+        <p>
+            <code>
+                for(const day of days){<br />
+                    const li = document.createElement('li');<br />
+                    li.textContent = day<br />
+                    daysList.appendChild(li);<br />
+                }<br />
+                for(const day of days){<br />
+                    daysList.innerHTML += `&#60;li>${day}&#60;/li>`<br />
+                }<br />
+            </code>
+            Al añadir elementos de con los metodos anteriores estamos inyectando código HTML al DOM,
+            este cada ves que le agregamos un nodo re-dibuja el arbol entero lo que genera un gasto enorme de recursos para el navegador. Para evitar esto se creo el <code>document.createDocumentFragment()</code>. Un fragmento de código basicamente es una variable o contenedor, donde escribimos el html que queremos inyectar en el DOM
+        </p>
+    </main>
+    <div>
+        <h1 id="title">DOM - Crear e insertar elementos I</h1>
+        <ul id="daysList"></ul>
+        <select name="" id="daysSelect"></select>
+    </div>
+    <script src="crear-insertar-elemento.js"></script>
+</body>
+</html>

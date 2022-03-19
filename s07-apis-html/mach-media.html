@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Mach Media</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <style>
+        body {
+            background-color: #2a2a2a;
+            font-family: sans-serif;
+            margin: 0;
+            padding-bottom: 100rem;
+        }
+
+        .title{
+            color:#fff;
+            text-align: center;
+        }
+
+        @media screen and (min-width:400px){
+            body{
+                background-color: #fff;
+            }
+            .title{
+                color:#2a2a2a
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Api Mach Media</h1>
+        <p>
+            <a href="https://developer.mozilla.org/es/docs/Web/API/Window/matchMedia">MDZ</a><br />
+            mql = window.matchMedia(mediaQueryString)<br />
+            mql viene de media query list, que es el objeto que se crea con el método matchMedia()<br />
+            mediaQueryString es cualquier media query válida en CSS
+        </p>
+        <h1 id="title" class="title">MatchMedia</h1>
+    </article>
+    <script src="mach-media.js"></script>
+</body>
+</html>

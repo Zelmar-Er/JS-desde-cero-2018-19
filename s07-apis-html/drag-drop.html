@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+            .smile {
+            width: 50px;
+        }
+        .drop-zone {
+            height: 150px;
+            border: 2px dotted black;
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 3rem;
+            margin-bottom: 6rem;
+            background-color: #26ff0085
+        }
+        /* Practica guiada */
+        .container {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .title {
+            margin: 0 0 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid black;
+            background-color: #7e57c2;
+        }
+        .tasks {
+            width: 30%;
+            text-align: center;
+            background: rgb(48, 166, 221);
+            border: 1px solid black;
+            min-height: 130px;
+        }
+        .tasks:first-child {
+            margin-right: 1rem;
+        }
+        .task {
+            background-color: #7e57c2;
+            padding: 1rem;
+            border-bottom: 1px solid #000;
+            cursor: move;
+        }
+        .task:first-child {
+            border-top: 1px solid #000;
+        }
+        .task:last-child {
+            border-bottom: none;
+        }
+        .active {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>I</h1>
+        <p>
+            Existen dos partes principales en esta API, el objeto a arrastrar y la zona donde vamos a dejarlo<br />
+            Para controlar estas acciones tenemos varios eventos de cada una de las partes<br />
+                Objeto a arrastrar:<br />
+            dragstart: Se dispara al comenzar a arrastrar<br />
+            drag: Se dispara mientras arrastramos<br />
+            dragend: Se dispara cuando soltamos el objeto<br />
+            Zona de destino:<br />
+            dragenter: Se dispara cuando el objeto entra en la zona de destino<br />
+            dragover: Se dispara cuando el objeto se mueve sobre la zona de destino<br />
+            drop: Se dispara cuando soltamos el objeto en la zona de destino<br />
+            dragleave: Se dispara cuando el objeto sale de la zona de destino<br />
+            NOTA: dragover y drop se utilizan en conjunto y cada uno deve tener capturao el evento y a este prevenirle el comportamiento por default (e.preventDefault())
+        </p>
+        <div class="practicaUno">
+            <img id="smile" class="smile" src="smile.svg" alt="smile face">
+            <div id="drop-zone" class="drop-zone">Drop Zone</div>
+        </div>
+    </section>
+    <section>
+        <h1>Practica Guiada</h1>
+        <div class="container">
+            <div id="pending-tasks" class="tasks">
+              <h2 class="title">Pending Tasks</h2>
+              <div id="task-1" class="task" draggable="true">Task 1</div>
+              <div id="task-2" class="task" draggable="true">Task 2</div>
+              <div id="task-3" class="task" draggable="true">Task 3</div>
+              <div id="task-4" class="task" draggable="true">Task 4</div>
+              <div id="task-5" class="task" draggable="true">Task 5</div>
+            </div>
+            <div id="finished-tasks" class="tasks">
+              <h2 class="title">Finished Tasks</h2>
+            </div>
+          </div>
+    </section>
+    <script src="drag-grop.js"></script>
+</body>
+</html>

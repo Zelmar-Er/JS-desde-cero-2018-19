@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecht</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+</head>
+<body>
+    <article>
+        <section>
+            <h1>Fetch API Introducción</h1>
+            <p>
+                Proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, como peticiones y respuestas.<br />
+                También provee un método global fetch() que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.<br />
+                Está basado en promesas, por lo cual tiene un response y un reject internos.<br />
+                Response tiene varios métodos: <dd>
+                    array​Buffer(): Archivos binarios en bruto (mp3, pdf, jpg, etc). Se utiliza cuando se necesita manipular el contenido del archivo.<br />
+                    blob(): Archivos binarios en bruto (mp3, pdf, jpg, etc). Se utiliza cuando no se necesita manipular el contenido y se va a trabajar con el archivo directamente.<br />
+                    clone(): crea un clon de un objeto de respuesta, idéntico en todos los sentidos, pero almacenado en una variable diferente.<br />
+                    form​Data(): Se utiliza para leer los objetos formData.<br />
+                    json(): Convierte los archivos json en un objeto de JavaScript.<br />
+                    text(): Se utiliza cuando queremos leer un archivo de texto. Siempre se codifica en UTF-8.<br />
+                </dd>
+                NOTA, Comprobación de soporte FETCH <br /><code>
+                if(window.fetch != undefined) console.log('FETCH OK')<br />
+                else console.log('FETCH NOT WORKS!')</code>
+            </p>
+            <div class="pruevasUno">
+                <h1 id="title">Fetch I</h1>
+                <button id="button">Get Data</button>
+                <ul id="list">
+
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h1>Peticiones POST</h1>
+            <p>
+                Fetch API
+                para hacer peticiones POST, admite un segundo parámetro. Las peticiones POST sirven para enviar datos o realizar inserciones en APIS o bases de datos.<br />
+                <code>
+                    fetch(url, {<br />
+                        method: 'POST',<br />
+                        body: Los datos que enviamos. Si es un objeto hay que convertirlo con JSON.stringify(datos),<br />
+                        headers: {<br />
+                            cabeceras de información sobre lo que estamos enviando
+                            <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers" target="_blank">MDN especificación</a><br />
+                        }<br />
+                    })<br />
+                     console.log(newPost)<br />
+                     console.log(JSON.stringify(newPost))<br />
+                </code>
+            </p>
+            <div>
+                <button id="button-dos">Send Data</button>
+                <ul id="list-dos">
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h1>
+                Fetch Lectura de archivos
+            </h1>
+            <p>
+                blob(): Binary Long OBject<br />
+                Si ponemos la ruta hacia el archivo podemos leer ese archivo y renderizarlo en pantalla<br />
+                URL: Con el objeto URL usando el método createObjectURL(archivo) podemos crear una ruta válida para ver ese archivo
+                <a href="https://developer.mozilla.org/es/docs/Web/API/URL" target="_blank">MDN especificación</a>
+            </p>
+            <div>
+                <button id="button-img">See Image</button>
+                <button id="button-pdf">See PDF</button>
+                <img id="img" class="img">
+                <a id="pdf" href="#" target="_blank"> Descargar</a>
+            </div>
+        </section>
+    </article>
+    <script src="fetch.js"></script>
+</body>
+</html>

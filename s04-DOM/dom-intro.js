@@ -1,0 +1,1 @@
+// Para ver el elemento seleccionado con las herramientas de desarrollador solo basta con seleccionarlo y poner $0 en la consola. Esto solo funciona en dichas herramientas

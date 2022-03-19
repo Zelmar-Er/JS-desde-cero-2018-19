@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Online Offline</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <style>
+        body {
+            background-color: #2f3238;
+            color: #fff;
+            font-family: sans-serif;
+        }
+        .alert {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: center;
+            transform: translateY(-100%);
+        }
+        .alert--online {
+            background-color: rgba(0, 255, 0, 0.6);
+            animation: reveal 4s ease;
+        }
+        .alert--offline {
+            background-color: rgba(255, 0, 0, 0.6);
+            animation: reveal 4s ease;
+        }
+        @keyframes reveal {
+            0% {
+                transform: translateY(-100%);
+            }
+            15%,
+            85% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>API Online Offline</h1>
+        <p>
+            Esta API nos sirve para saber si el navegador esta online u offline
+        </p>
+        <p id="alert" class="alert">Ups, it seems you're offline</p>
+    </article>
+    <script src="online-offline.js"></script>
+</body>
+</html>

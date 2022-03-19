@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en mause y teclado</title>
+    <style>
+        body{
+            background-color: #eee;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
+        a,button{
+            display: block;
+        }
+        #box{
+            height: 250px;
+            width: 250px;
+            margin: 5px;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <p>
+        Un evento es cualquier cosa que sucede en nuestro documento.<br /> <dd>
+            - El contenido se ha leído<br />
+            - El contenido se ha cargaro<br />
+            - El usuario mueve el ratón<br />
+            - El usuario pulsa una tecla<br />
+            - La ventana se ha cerrado<br />
+            - Y un largo etc.
+        </dd>
+    </p>
+    <p>
+        Eventos de ratón: <dd>
+            click - cuando pulsamos el botón izquierdo del ratón.<br />
+            dblclick - cuando pulsamos dos veces seguidas el botón izquierdo del ratón.<br />
+            mouseenter - cuando entramos en la zona que tiene el evento.<br />
+            mouseleave - cuando salimos de la zona que tiene el evento.<br />
+            mousedown - cuando pulsamos y no soltamos el botón izquierdo del mause.<br />
+            mouseup - cuando soltamos el voton izquierdo del ratón.<br />
+            mousemove - cuando movemos el ratón.
+        </dd>
+    </p>
+    <p>
+        Eventos del teclado: <dd>
+            keydown - cuando pulsamos una tecla.<br />
+            keyup - cuando soltamos una tecla.<br />
+            keypress - cuando pulsamos una tecla y no la soltamos.
+        </dd>
+    </p>
+    <section>
+        <h2>Prueba</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/Events">Referencia a eventos</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Referencia a eventos (inglés)</a>
+        <button id="button">Click me!</button>
+        <input id="input" type="text">
+        <div id="box" class="green"></div>
+    </section>
+    <script src="eventos.js"></script>
+</body>
+</html>

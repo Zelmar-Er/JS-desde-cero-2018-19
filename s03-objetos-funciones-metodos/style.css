@@ -1,0 +1,10 @@
+body{
+    background-color: #eee;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+img{
+    max-width: 80%;
+}

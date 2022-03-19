@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+</head>
+<body>
+    <section>
+        <h1>DOM Traversing</h1>
+        <p>
+            Es tomando como referencia un nodo, saber movernos a otros tanto hacia abajo como arriba o hermanos.
+        </p>
+        <p>
+            Padre - parent (Nodo del que deciende)<br />
+            - parentNode - Devuelve el nodo padre (que puede no ser un elemento)<br />
+            - parentElement - Devuelve el nodo elemento padre<br />
+            NOTA: Los nodos del tipo Document y documentFragment nunca van a tener un elemento padre, parentNode devolverá siempre null.
+        </p>
+        <p>
+            Hijos - child (Nodo que deciende de un padre)<br />
+        - childNodes - Devuelve todos los nodos hijos<br />
+        - children - Devuelve todos los nodos elementos hijos<br />
+        - firstChild - Devuelve el primer nodo hijo<br />
+        - firstElementChild - Devuelve el primer nodo elemento hijo<br />
+        - lastChild - Devuelve el último nodo hijo<br />
+        - lastElementChild - Devuelve el último nodo elemento hijo<br />
+        - hasChildNodes() - Devuelve true si el nodo tiene hijos y false si no tiene.
+        </p>
+        <p>
+            Hermanos - siblings (Nodo al mismo nivel)<br />
+            - nextSibling - Devuelve el siguiente nodo hermano<br />
+            - nextElementSibling - <br />
+            - previousSibling - <br />
+            - previousElementSibling - 
+        </p>
+        <p>
+            Cercano<br />
+            - closet(selector) - Selecciona el nodo más cercano que cumpla con el selector, aún es experimental.
+        </p>
+
+    </section>
+    <div >
+        <h1 id="title">DOM - Recorrerlo (DOM Traversing)</h1>
+        <nav>
+            <ul id="parent">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <ul>
+                    <li>grandoson-1</li>
+                    <li>grandoson-2</li>
+                    <li>grandoson-3</li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="dom-traversing.js"></script>
+</body>
+</html>

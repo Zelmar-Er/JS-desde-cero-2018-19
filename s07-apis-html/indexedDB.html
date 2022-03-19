@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <style>
+        body {
+            background-color: #2f3238;
+            color: #ccc;
+            user-select: none;
+        }
+        .form {
+            width: 100%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .button {
+            background: orangered;
+            border: none;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .tasks {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Introducción y creación</h1>
+        <h2>IndexedDB</h2>
+        <p>
+            Es una manera de almacenar datos de manera persistente en el navegador. Almacena pares key-value (llave-valor). Los valores pueden ser objetos con estructuras complejas, y las llaves pueden ser propiedades de esos objetos.<br /> La API de IndexedDB es mayormente asíncrona. <br /> IndexedDB usa eventos DOM para notificar cunado los resultados están disponibles y es orientada a objetos.<br />
+            NOTA:<br />La principal diferencia entre IndexedDB y LocalStorage es que, esta ultima sirve para porciones de datos pequeñas mientras que IndexedDB sirve para grandes cantidades de datos. IndexedDB es una base de datos indexada no sql
+        </p>
+        <h2>Creación</h2>
+        <p>
+            Crear la base de datos a través del objeto <code>indexedDB()</code> y el método <code>open()</code><br />
+            Comprobar si la base de datos existe o tiene que ser creada a través del método <code>onupgradeneeded()</code><br />
+            Crear almacén de objetos con el método <code>createObjectStore()</code><br />
+            Escuchar los eventos de éxito y de error con los métodos <code>onsucces()</code> y <code>onerror()</code><br />
+            NOTA:<br />.Cuando accedemos a una base de datos relacional o de tablas, si no existe no se puede accerder a ella. Con las bases de tados no-sql o no relacionales esto no pasa, si no existe al acceder a ella, el sistema la crea.<br />
+            .Al lugar donde guardamos los datos en IndexedDB se le denomina "almacenes", en otras bases de datos no-sql como MongoDB y FireBase se les denomina "colecciones".<br />
+        </p>
+        <div>
+            <form id="form" class="form">
+                <label for="task">Task</label>
+                <input type="text" name="task">
+                <select name="priority">
+                  <option value="low">Low</option>
+                  <option value="normal">Normal</option>
+                  <option value="high">High</option>
+                </select>
+                <button class="button" name="button" data-action="add">Add Task</button>
+              </form>
+              <div id="tasks" class="tasks"></div>
+        </div>
+    </section>
+    <section>
+        <h1>II - Añadiendo Registros</h1>
+        <p>
+           <a href="https://developer.mozilla.org/es/docs/IndexedDB-840092-dup">Especificación oficial</a> 
+        </p>
+    </section>
+    <section>
+        <h1>III - Leer Datos</h1>
+        <h1>IV - Actualizar Datos</h1>
+        <h1>V - Borrar Datos</h1>
+        <h2>Material extra</h2>
+        <p>
+            Contenido extra para buscar:
+            <dd>
+                Método getAll() para obtener todos los registros de la base de datos<br />
+                Método clear() para borrar objetos del almacen<br />
+                Método deleteDatabase() para borrar la base de datos<br />
+                Metodo onBlocked() para bloquear bases de datos en los cambios de version<br />
+                Objeto IDBKeyRange para búsquedas en la base de datos<br />
+                Método createIndex() para la creación de índices en la base de datos<br />
+                Versionado de bases de datos
+            </dd>
+        <a href="https://dexie.org/">Libreria indexedDB</a>
+        </p>
+    </section>
+    <script src="indexedDB.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Programación Orientada a Objetos</h1>
+        <p>
+            Es un paradigma de la programación que actualiza la forma de programar anterior.<br />
+            Un paradigma de progamación es una forma de resolver problemas.<br />
+            Algunos de los conceptos fundamentales son: <dd>
+                - Clase<br />
+                - Herencia<br />
+                - Objeto<br />
+                - Método<br />
+                - Evento<br />
+                - Etc
+            </dd>
+        </p>
+        <section>
+            <h2>Clases - Propiedades</h2>
+            <p>
+                Hasta ahora si teniamos a dos personas escribiamos el siguiente codigo <code> <br />
+                    const persona = {<br />
+                        nombre: 'Juan',<br />
+                        apellido: 'García',<br />
+                        edad: 23<br />}<br />
+                        const persona2 = {<br />
+                            nombre: 'Amelia',<br />
+                            apellido: 'Sosa',<br />
+                            edad: 26<br />}</code>
+                    Como se observa las dos entidades tienen la misma estructura (nombre, apellido, edad), cuando esto sucede podemos utilizar una clase. Una clase es una plantilla que sirve como molde para crear objetos. Cuando creamos un objeto, a esa acción se le denomina INSTANCIAR un objeto. <br />
+                    Necesitamos una función constructora. Se tiene que llamar constructor (obligatorio) y se ejecuta cada ves que creamos un objeto.<br />
+                    <code>class Persona{<br />
+                        constructor(nombre,apellido,edad){<br />
+                            this.nombre = nombre<br />
+                            this.apellido = apellido<br />
+                            this.edad = edad<br />
+                        }<br />}<br /></code>
+                    El nombre de las clases por convención siempre comienza con mayuscula.<br />
+                    This hace referencia al objeto.<br />
+                    nombre del objeto = nombre del parámetro.<br />
+                    apellido del objeto = apellido del parámetro.<br />
+                    edad del objeto = edad del parámetro.<br />
+                    Se le pueden asignar propiedades que no haya en los parámetros, pero siempre utilizando this para referenciar al objeto.<br />
+                    <code>this.dato = `${nombre} ${apellido} ${edad}`</code><br />
+            </p>
+        </section>
+        <section>
+            <h2>Claese Métodos</h2>
+            <p>
+                Los objetos pueden tener funciones asociadas a él. En ese caso se les denomina métodos.<br />
+                Deben estar dentro de la clases pero fuera del constructor.<br />
+                <code>saludar(){<br />
+                return `Hola, me llamo ${this.nombre} y tengo ${this.edad} años`;<br />
+                }<br /></code>
+            </p>
+        </section>
+        <section>
+            <h2>Crear Objetos</h2>
+            <p>
+                Para crear un objeto utilizando la clase o plantilla se hace con la palabra reservada new y el nombre de la clase que queremos utilizar más los parametros establecidos en el constructor.<br />
+                <code>const andres = new Persona('Andres','Morales',45)</code><br />
+                Una vez INSTANCIADO el objeto podremos acceder a sus propiedades o métodos utilizando la nomenclatura del punto o buscando su propiedad en el objeto.<br />
+                <code>
+                    andres.nombre<br />
+                    andres.datos<br />
+                    andres.saludar()<br />
+                </code> o<br />
+                <code>andres['nombre']<br />
+                andres['edad']<br />
+                andres['saludar']()</code>
+            </p>
+        </section>
+    </main>
+    <script src="poo.js"></script>
+</body>
+</html>

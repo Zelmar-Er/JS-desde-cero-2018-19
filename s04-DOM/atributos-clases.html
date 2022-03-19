@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos y Clases</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+</head>
+<body>
+    <article>
+        <h1>Atributos y clases</h1>
+        <p>
+            Atributos: <dd>
+                element.getAttribute('attribute') - para obtener un atributo.<br />
+                element.setAttribute('attribute','value') - para agregar un atributo y su valor.<br />
+            </dd>
+            Clases: <dd>
+                element.classList.add('class','class',...) - para agregar clases.<br />
+                element.classList.remove('class','class',...) - para remover clases.<br />
+                element.classList.contains('class') - para saber si el elmento contiene dicha clase.<br />
+                element.classList.replace('oldClass','newClass') - para reemplazar una clase por otra.
+            </dd>
+            Atributos directos: id y value
+        </p>
+    </article>
+    <section>
+        <h1 id="title" class="title">Atributos desde JavaScript Practica</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" value="">
+        </form>
+    </section>
+</body>
+<script src="atributos-clases.js"></script>
+</html>

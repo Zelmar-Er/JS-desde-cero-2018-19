@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Evento</title>
+    <link rel="stylesheet" href="../s03-objetos-funciones-metodos/style.css">
+    <link rel="stylesheet" href="obj-evento.css">
+</head>
+<body>
+    <main>
+        <h1>Objeto Evento</h1>
+        <p>
+            El objeto evento es el parametro pasado en la función de un event listener, ejemplo <br /><code>addEventListener('click',(evento)=>{<br />
+                console.log(evento);<br />}<br />
+            </code> Este parametro suele llamarse 'e' o 'event' y nos pasara información sobre el evento.
+        </p>
+        <p>Los eventos se escuchan con <code>.addEventListener()</code>, pero tambien se pueden forsar utilizando el evento como si fuera un metodo como por ejemplo <code>.click()</code>, que forsaria el evento click.</p>
+    </main>
+    <form action="" id="form">
+        <input type="text" id="input">
+        <input type="submit" value="enviar">
+    </form>
+    <button id="btn">Click me!</button>
+    <div id="gallery" class="gallery">
+        <div class="gallery_item">1</div>
+        <div class="gallery_item">2</div>
+        <div class="gallery_item">3</div>
+        <div class="gallery_item">4</div>
+        <div class="gallery_item">5</div>
+        <div class="gallery_item">6</div>
+        <div class="gallery_item">7</div>
+        <div class="gallery_item">8</div>
+        <div class="gallery_item">9</div>
+    </div>
+    <script src="obj-evento.js"></script>
+</body>
+</html>
